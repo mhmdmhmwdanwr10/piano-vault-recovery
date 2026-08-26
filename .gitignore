@@ -1,0 +1,30 @@
+# Build / IDE
+__pycache__/
+*.pyc
+*.pyo
+.idea/
+.vscode/
+*.swp
+
+# APK analysis artifacts (large, not needed in repo)
+jadx_out/
+apktool_out/
+base.apk
+Piano_71.0.apks
+native/
+
+# Ghidra project (large binary files)
+ghidra_project/
+
+# User data (encrypted + recovered files)
+locked/
+recovered/
+recovered_new/
+backup.recovered
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Temp
+*.tmp
