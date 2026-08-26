@@ -1,5 +1,9 @@
 # Piano Vault Recovery Tool
 
+<div align="center">
+  <img src="assets/app_icon.jpg" alt="Piano Vault Icon" width="150" />
+</div>
+
 A reverse-engineering and file recovery tool for the **Piano Vault** (Hide Photos & Videos) Android application. This tool decrypts files encrypted by the app, extracts the vault password, recovers original filenames from the backup database, and embeds metadata (EXIF dates, original paths) into recovered files.
 
 > **Disclaimer:** This tool is intended for legitimate data recovery of **your own files**. Use responsibly and in compliance with applicable laws.

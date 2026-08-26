@@ -6,12 +6,15 @@ __pycache__/
 .vscode/
 *.swp
 
-# APK analysis artifacts (large, not needed in repo)
+# Analysis and test data
+analysis/
+test_data/
 jadx_out/
 apktool_out/
 base.apk
 Piano_71.0.apks
 native/
+piano_native_report.txt
 
 # Ghidra project (large binary files)
 ghidra_project/
@@ -28,3 +31,4 @@ Thumbs.db
 
 # Temp
 *.tmp
+
