@@ -54,7 +54,7 @@ Encrypted file layout:
 ### Full recovery (recommended)
 
 ```bash
-python recovery/piano_recovery.py ./locked --out ./recovered
+python piano_recovery.py ./locked --out ./recovered
 ```
 
 This runs all 6 stages:
@@ -69,16 +69,16 @@ This runs all 6 stages:
 
 ```bash
 # Preview filename restoration without making changes
-python recovery/piano_recovery.py ./locked --out ./recovered --dry-run
+python piano_recovery.py ./locked --out ./recovered --dry-run
 
 # Only decrypt files, skip filename restoration
-python recovery/piano_recovery.py ./locked --out ./recovered --decrypt-only
+python piano_recovery.py ./locked --out ./recovered --decrypt-only
 
 # Skip decryption, only restore filenames (files already decrypted)
-python recovery/piano_recovery.py ./locked --out ./recovered --skip-decrypt
+python piano_recovery.py ./locked --out ./recovered --skip-decrypt
 
 # Disable EXIF metadata injection
-python recovery/piano_recovery.py ./locked --out ./recovered --no-exif
+python piano_recovery.py ./locked --out ./recovered --no-exif
 ```
 
 > **Note (Windows):** If you see Unicode errors, prefix with: `$env:PYTHONIOENCODING="utf-8"`
@@ -102,13 +102,13 @@ recovered/
 
 ```
 piano-vault-recovery/
-├── recovery/
-│   ├── piano_recovery.py    ← Main unified recovery script
-│   ├── recovery.py          ← Single-file decryptor (standalone)
-│   ├── recovery_all.py      ← Batch decryptor with type detection
-│   └── rename_from_db.py    ← DB-based filename restorer (standalone)
+├── piano_recovery.py    ← Main unified recovery script
 ├── docs/
-│   └── workflow.md          ← Detailed reverse-engineering workflow
+│   └── workflow.md      ← Detailed reverse-engineering workflow
+├── legacy/              ← Older scripts (before unification)
+│   ├── recovery.py      
+│   ├── recovery_all.py  
+│   └── rename_from_db.py
 ├── README.md
 ├── requirements.txt
 └── .gitignore
